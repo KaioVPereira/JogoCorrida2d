@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Velocidade250a500.wav-d3fd693ac7f9c6ab4604893f63b496b7.sample"
+
+[deps]
+
+source_file="res://Sons/Velocidade250a500.wav"
+dest_files=[ "res://.import/Velocidade250a500.wav-d3fd693ac7f9c6ab4604893f63b496b7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

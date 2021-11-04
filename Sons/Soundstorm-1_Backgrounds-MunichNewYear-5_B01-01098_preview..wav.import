@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Soundstorm-1_Backgrounds-MunichNewYear-5_B01-01098_preview..wav-54931e73c1f25793b1ec8ad8387ed5ea.sample"
+
+[deps]
+
+source_file="res://Sons/Soundstorm-1_Backgrounds-MunichNewYear-5_B01-01098_preview..wav"
+dest_files=[ "res://.import/Soundstorm-1_Backgrounds-MunichNewYear-5_B01-01098_preview..wav-54931e73c1f25793b1ec8ad8387ed5ea.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

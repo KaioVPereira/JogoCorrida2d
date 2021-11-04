@@ -1,0 +1,209 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://cenaranking.gd" type="Script" id=1]
+[ext_resource path="res://Imagens/6900790-cool-rally-car-wallpaper.jpg" type="Texture" id=2]
+[ext_resource path="res://Fonts/ubuntu/Ubuntu-BoldItalic.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Sons/11_an_old_bassman.wav" type="AudioStream" id=4]
+[ext_resource path="res://Sons/cena_inicio.wav" type="AudioStream" id=5]
+[ext_resource path="res://Sons/menu-sfx-select-8-sound-effect-69717408.wav" type="AudioStream" id=6]
+[ext_resource path="res://Sons/selecionar_menu.wav" type="AudioStream" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 3 )
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2( 1.79338, 1.76877 )
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 536.797, 310.497 )
+scale = Vector2( 0.565249, 0.585101 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 477.152
+margin_top = 557.336
+margin_right = 599.149
+margin_bottom = 597.336
+text = "Voltar ao menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TituloDifuculdade" type="RichTextLabel" parent="."]
+modulate = Color( 0.901961, 0.0901961, 0.0901961, 1 )
+margin_left = 328.737
+margin_top = 17.0
+margin_right = 981.737
+margin_bottom = 103.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Selecione o rank"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pista1" type="RichTextLabel" parent="."]
+modulate = Color( 0.901961, 0.0901961, 0.0901961, 1 )
+margin_left = 2.0
+margin_top = 60.0
+margin_right = 181.0
+margin_bottom = 146.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Pista 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pista2" type="RichTextLabel" parent="."]
+modulate = Color( 0.901961, 0.0901961, 0.0901961, 1 )
+margin_left = 907.254
+margin_top = 57.8655
+margin_right = 1086.25
+margin_bottom = 143.865
+custom_fonts/normal_font = SubResource( 1 )
+text = "Pista2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 179.0
+margin_top = 104.0
+margin_right = 906.0
+margin_bottom = 543.0
+color = Color( 0, 0, 0, 0.721569 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="ItemList" type="ItemList" parent="."]
+modulate = Color( 1, 1, 1, 0.760784 )
+margin_left = 225.0
+margin_top = 227.0
+margin_right = 873.0
+margin_bottom = 490.0
+custom_fonts/font = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RankFacilPista1" type="Button" parent="."]
+margin_left = 13.0
+margin_top = 155.865
+margin_right = 135.0
+margin_bottom = 194.865
+text = "Rank Fácil"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RankFacilPista2" type="Button" parent="."]
+margin_left = 927.727
+margin_top = 149.461
+margin_right = 1049.73
+margin_bottom = 188.461
+text = "Rank Fácil"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RankMedioPista1" type="Button" parent="."]
+margin_left = 9.84208
+margin_top = 285.005
+margin_right = 131.842
+margin_bottom = 324.005
+text = "Rank Médio"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RankMedioPista2" type="Button" parent="."]
+margin_left = 924.829
+margin_top = 283.138
+margin_right = 1046.83
+margin_bottom = 322.138
+text = "Rank Médio"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RankDificilPista1" type="Button" parent="."]
+margin_left = 9.84209
+margin_top = 415.211
+margin_right = 131.842
+margin_bottom = 454.211
+text = "Rank Difícil"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RankDificilPista2" type="Button" parent="."]
+margin_left = 924.602
+margin_top = 420.768
+margin_right = 1046.6
+margin_bottom = 459.768
+text = "Rank Difícil"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 234.0
+margin_top = 153.933
+margin_right = 887.0
+margin_bottom = 219.933
+custom_fonts/normal_font = SubResource( 3 )
+text = "POS            SEGUNDOS          NOME           PISTA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -19.184
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -19.184
+
+[node name="SelecionarMenu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -20.959
+
+[node name="MouseEntrabotao" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -20.194
+[connection signal="mouse_entered" from="Button" to="." method="VOLTARMENUMOUSENTRA"]
+[connection signal="pressed" from="Button" to="." method="voltar_menu"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
+[connection signal="mouse_entered" from="RankFacilPista1" to="." method="Pista1Facil"]
+[connection signal="pressed" from="RankFacilPista1" to="." method="rank_facil"]
+[connection signal="mouse_entered" from="RankFacilPista2" to="." method="pista2facil"]
+[connection signal="pressed" from="RankFacilPista2" to="." method="Faciopista2"]
+[connection signal="mouse_entered" from="RankMedioPista1" to="." method="pista1medio"]
+[connection signal="pressed" from="RankMedioPista1" to="." method="rank_medio"]
+[connection signal="mouse_entered" from="RankMedioPista2" to="." method="pista2medio"]
+[connection signal="pressed" from="RankMedioPista2" to="." method="MedioPista2"]
+[connection signal="mouse_entered" from="RankDificilPista1" to="." method="pista1dificil"]
+[connection signal="pressed" from="RankDificilPista1" to="." method="rank_dificil"]
+[connection signal="mouse_entered" from="RankDificilPista2" to="." method="pista2dificil"]
+[connection signal="pressed" from="RankDificilPista2" to="." method="DificilPista2"]

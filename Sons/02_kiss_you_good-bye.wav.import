@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/02_kiss_you_good-bye.wav-7ee7c296a72e4c9adcb96b3a553309cf.sample"
+
+[deps]
+
+source_file="res://Sons/02_kiss_you_good-bye.wav"
+dest_files=[ "res://.import/02_kiss_you_good-bye.wav-7ee7c296a72e4c9adcb96b3a553309cf.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

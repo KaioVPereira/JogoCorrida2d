@@ -1,0 +1,374 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://cenaselecaocarros.gd" type="Script" id=1]
+[ext_resource path="res://Sons/selecaoo_carro.wav" type="AudioStream" id=2]
+[ext_resource path="res://Carros/car_01_02.png" type="Texture" id=3]
+[ext_resource path="res://Carros/car_01_01.png" type="Texture" id=4]
+[ext_resource path="res://Carros/car_01_05.png" type="Texture" id=5]
+[ext_resource path="res://Carros/car_01_03.png" type="Texture" id=6]
+[ext_resource path="res://Carros/car_01_06.png" type="Texture" id=7]
+[ext_resource path="res://Carros/car_01_04.png" type="Texture" id=8]
+[ext_resource path="res://Sons/selecionar_menu.wav" type="AudioStream" id=9]
+[ext_resource path="res://Sons/menu-sfx-select-8-sound-effect-69717408.wav" type="AudioStream" id=10]
+[ext_resource path="res://Imagens/cenaselecao.jpg" type="Texture" id=11]
+[ext_resource path="res://Carros/car_02_03.png" type="Texture" id=12]
+[ext_resource path="res://Carros/car_03_01.png" type="Texture" id=13]
+[ext_resource path="res://Carros/car_03_04.png" type="Texture" id=14]
+[ext_resource path="res://Carros/car_02_01.png" type="Texture" id=15]
+[ext_resource path="res://Carros/car_02_06.png" type="Texture" id=16]
+[ext_resource path="res://Carros/car_02_02.png" type="Texture" id=17]
+[ext_resource path="res://Carros/car_03_05.png" type="Texture" id=18]
+[ext_resource path="res://Carros/car_02_04.png" type="Texture" id=19]
+[ext_resource path="res://Carros/car_02_05.png" type="Texture" id=20]
+[ext_resource path="res://Carros/car_03_03.png" type="Texture" id=21]
+[ext_resource path="res://Carros/car_03_06.png" type="Texture" id=22]
+[ext_resource path="res://Carros/car_03_02.png" type="Texture" id=23]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="Animation" id=7]
+resource_name = "entradacena"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "saidacena"
+
+[sub_resource type="Animation" id=9]
+resource_name = "voltamenu"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2( 1.86825, 1.80826 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 514.966, 300.22 )
+scale = Vector2( 0.534429, 0.555016 )
+texture = ExtResource( 11 )
+
+[node name="VoltarMenu" type="Button" parent="."]
+margin_left = 10.0
+margin_top = 554.0
+margin_right = 142.0
+margin_bottom = 595.0
+text = "Voltar para o Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SomAmbiente" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -20.194
+
+[node name="Carro1" type="Button" parent="."]
+margin_left = 18.7728
+margin_top = 178.834
+margin_right = 81.7728
+margin_bottom = 299.834
+rect_scale = Vector2( 0.7, 0.7 )
+custom_styles/normal = SubResource( 1 )
+icon = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Carro2" type="Button" parent="."]
+margin_left = 79.587
+margin_top = 175.834
+margin_right = 138.587
+margin_bottom = 306.834
+rect_scale = Vector2( 0.7, 0.7 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Carro3" type="Button" parent="."]
+margin_left = 144.769
+margin_top = 179.078
+margin_right = 202.769
+margin_bottom = 310.078
+rect_scale = Vector2( 0.7, 0.7 )
+custom_styles/normal = SubResource( 3 )
+icon = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Carro4" type="Button" parent="."]
+margin_left = 213.014
+margin_top = 182.827
+margin_right = 273.013
+margin_bottom = 313.827
+rect_scale = Vector2( 0.7, 0.7 )
+custom_styles/normal = SubResource( 4 )
+icon = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Carro5" type="Button" parent="."]
+margin_left = 280.759
+margin_top = 181.16
+margin_right = 341.759
+margin_bottom = 312.16
+rect_scale = Vector2( 0.7, 0.7 )
+custom_styles/normal = SubResource( 5 )
+icon = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Carro6" type="Button" parent="."]
+margin_left = 23.071
+margin_top = 287.461
+margin_right = 87.071
+margin_bottom = 418.461
+rect_scale = Vector2( 0.7, 0.7 )
+custom_styles/normal = SubResource( 6 )
+icon = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Carro7" type="Button" parent="."]
+margin_left = 88.5481
+margin_top = 291.029
+margin_right = 152.548
+margin_bottom = 422.029
+rect_scale = Vector2( 0.7, 0.7 )
+custom_styles/normal = SubResource( 6 )
+icon = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Carro8" type="Button" parent="."]
+margin_left = 151.505
+margin_top = 291.029
+margin_right = 215.505
+margin_bottom = 422.029
+rect_scale = Vector2( 0.7, 0.7 )
+custom_styles/normal = SubResource( 6 )
+icon = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Carro9" type="Button" parent="."]
+margin_left = 210.966
+margin_top = 293.407
+margin_right = 274.966
+margin_bottom = 424.407
+rect_scale = Vector2( 0.7, 0.7 )
+custom_styles/normal = SubResource( 6 )
+icon = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Carro10" type="Button" parent="."]
+margin_left = 277.561
+margin_top = 288.65
+margin_right = 341.561
+margin_bottom = 419.65
+rect_scale = Vector2( 0.7, 0.7 )
+custom_styles/normal = SubResource( 6 )
+icon = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Carro11" type="Button" parent="."]
+margin_left = 25.4494
+margin_top = 406.382
+margin_right = 89.4494
+margin_bottom = 537.382
+rect_scale = Vector2( 0.7, 0.7 )
+custom_styles/normal = SubResource( 6 )
+icon = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Carro12" type="Button" parent="."]
+margin_left = 84.9099
+margin_top = 408.76
+margin_right = 148.91
+margin_bottom = 539.76
+rect_scale = Vector2( 0.7, 0.7 )
+custom_styles/normal = SubResource( 6 )
+icon = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Carro13" type="Button" parent="."]
+margin_left = 149.127
+margin_top = 407.43
+margin_right = 213.127
+margin_bottom = 538.43
+rect_scale = Vector2( 0.7, 0.7 )
+custom_styles/normal = SubResource( 6 )
+icon = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Carro14" type="Button" parent="."]
+margin_left = 214.643
+margin_top = 407.43
+margin_right = 278.643
+margin_bottom = 538.43
+rect_scale = Vector2( 0.7, 0.7 )
+custom_styles/normal = SubResource( 6 )
+icon = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Carro15" type="Button" parent="."]
+margin_left = 280.159
+margin_top = 412.469
+margin_right = 344.159
+margin_bottom = 543.469
+rect_scale = Vector2( 0.7, 0.7 )
+custom_styles/normal = SubResource( 6 )
+icon = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Carro16" type="Button" parent="."]
+margin_left = 77.3115
+margin_top = 60.9512
+margin_right = 141.311
+margin_bottom = 191.951
+rect_scale = Vector2( 0.7, 0.7 )
+custom_styles/normal = SubResource( 6 )
+icon = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Carro17" type="Button" parent="."]
+margin_left = 144.087
+margin_top = 63.4711
+margin_right = 208.087
+margin_bottom = 194.471
+rect_scale = Vector2( 0.7, 0.7 )
+custom_styles/normal = SubResource( 6 )
+icon = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Carro18" type="Button" parent="."]
+margin_left = 210.863
+margin_top = 67.2508
+margin_right = 274.863
+margin_bottom = 198.251
+rect_scale = Vector2( 0.7, 0.7 )
+custom_styles/normal = SubResource( 6 )
+icon = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="selecionar" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = -19.185
+
+[node name="MouseEntra" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -21.204
+
+[node name="Entradacena" type="AnimationPlayer" parent="."]
+autoplay = "entradacena"
+anims/entradacena = SubResource( 7 )
+anims/saidacena = SubResource( 8 )
+
+[node name="saircena" type="AnimationPlayer" parent="."]
+anims/voltamenu = SubResource( 9 )
+[connection signal="mouse_entered" from="VoltarMenu" to="." method="sairentramouse"]
+[connection signal="pressed" from="VoltarMenu" to="." method="voltar_menu"]
+[connection signal="mouse_entered" from="Carro1" to="." method="mouseentra1"]
+[connection signal="pressed" from="Carro1" to="." method="selec_1"]
+[connection signal="mouse_entered" from="Carro2" to="." method="mouseentra2"]
+[connection signal="pressed" from="Carro2" to="." method="selec_2"]
+[connection signal="mouse_entered" from="Carro3" to="." method="mouseentra3"]
+[connection signal="pressed" from="Carro3" to="." method="selec_3"]
+[connection signal="mouse_entered" from="Carro4" to="." method="mouseentra4"]
+[connection signal="pressed" from="Carro4" to="." method="selec_4"]
+[connection signal="mouse_entered" from="Carro5" to="." method="mouseentra5"]
+[connection signal="pressed" from="Carro5" to="." method="selec_5"]
+[connection signal="mouse_entered" from="Carro6" to="." method="mouseentra6"]
+[connection signal="pressed" from="Carro6" to="." method="selec_6"]
+[connection signal="mouse_entered" from="Carro7" to="." method="mouseentra6"]
+[connection signal="pressed" from="Carro7" to="." method="selec_7"]
+[connection signal="mouse_entered" from="Carro8" to="." method="mouseentra6"]
+[connection signal="pressed" from="Carro8" to="." method="selec_8"]
+[connection signal="mouse_entered" from="Carro9" to="." method="mouseentra6"]
+[connection signal="pressed" from="Carro9" to="." method="selec_9"]
+[connection signal="mouse_entered" from="Carro10" to="." method="mouseentra6"]
+[connection signal="pressed" from="Carro10" to="." method="selec_10"]
+[connection signal="mouse_entered" from="Carro11" to="." method="mouseentra6"]
+[connection signal="pressed" from="Carro11" to="." method="selec_11"]
+[connection signal="mouse_entered" from="Carro12" to="." method="mouseentra6"]
+[connection signal="pressed" from="Carro12" to="." method="selec_12"]
+[connection signal="mouse_entered" from="Carro13" to="." method="mouseentra6"]
+[connection signal="pressed" from="Carro13" to="." method="selec_13"]
+[connection signal="mouse_entered" from="Carro14" to="." method="mouseentra6"]
+[connection signal="pressed" from="Carro14" to="." method="selec_14"]
+[connection signal="mouse_entered" from="Carro15" to="." method="mouseentra6"]
+[connection signal="pressed" from="Carro15" to="." method="selec_15"]
+[connection signal="mouse_entered" from="Carro16" to="." method="mouseentra6"]
+[connection signal="pressed" from="Carro16" to="." method="selec_16"]
+[connection signal="mouse_entered" from="Carro17" to="." method="mouseentra6"]
+[connection signal="pressed" from="Carro17" to="." method="selec_17"]
+[connection signal="mouse_entered" from="Carro18" to="." method="mouseentra6"]
+[connection signal="pressed" from="Carro18" to="." method="selec_18"]
+[connection signal="animation_finished" from="Entradacena" to="." method="saircena"]
+[connection signal="animation_finished" from="saircena" to="." method="voltaraomenu"]

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/selecao_pista.wav-22fca1d5effc2d18be4c2ce2ec4b7f88.sample"
+
+[deps]
+
+source_file="res://Sons/selecao_pista.wav"
+dest_files=[ "res://.import/selecao_pista.wav-22fca1d5effc2d18be4c2ce2ec4b7f88.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,134 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Imagens/cenalogin.jpg" type="Texture" id=1]
+[ext_resource path="res://Fonts/ubuntu/Ubuntu-MediumItalic.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://cenalogin.gd" type="Script" id=3]
+[ext_resource path="res://Fonts/DelaGothicOne-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Sons/11_an_old_bassman.wav" type="AudioStream" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+outline_size = 2
+outline_color = Color( 0.0588235, 0.0156863, 0.0156863, 1 )
+font_data = ExtResource( 4 )
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 4.76837e-06, 10.6787 )
+scale = Vector2( 1.87046, 1.78972 )
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 514.658, 298.92 )
+scale = Vector2( 0.537311, 0.566481 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LabEmail" type="RichTextLabel" parent="."]
+margin_left = 623.078
+margin_top = 125.667
+margin_right = 753.078
+margin_bottom = 208.667
+custom_fonts/normal_font = SubResource( 1 )
+text = "E-mail:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabSenha" type="RichTextLabel" parent="."]
+margin_left = 630.185
+margin_top = 242.716
+margin_right = 755.185
+margin_bottom = 333.716
+custom_fonts/normal_font = SubResource( 2 )
+text = "Senha:
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Entrar" type="Button" parent="."]
+margin_left = 874.136
+margin_top = 535.033
+margin_right = 993.136
+margin_bottom = 586.033
+text = "Entrar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Email" type="LineEdit" parent="."]
+margin_left = 732.505
+margin_top = 128.664
+margin_right = 1002.5
+margin_bottom = 169.664
+rect_pivot_offset = Vector2( 134.998, 80.0035 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Senha" type="LineEdit" parent="."]
+margin_left = 735.028
+margin_top = 246.861
+margin_right = 1005.03
+margin_bottom = 287.861
+secret = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="Popup" type="Popup" parent="."]
+visible = true
+margin_left = 131.29
+margin_top = 319.973
+margin_right = 244.29
+margin_bottom = 385.973
+rect_scale = Vector2( 3.44529, 2.28362 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="AcceptDialog" type="AcceptDialog" parent="Popup"]
+visible = true
+margin_left = 110.057
+margin_top = 4.66605
+margin_right = 210.057
+margin_bottom = 96.666
+size_flags_horizontal = 0
+size_flags_vertical = 0
+window_title = "Atenção"
+dialog_text = "E-mail e/ou Senha inválidas."
+dialog_autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="site" type="RichTextLabel" parent="."]
+margin_left = 8.18342
+margin_top = 542.023
+margin_right = 699.183
+margin_bottom = 624.023
+custom_fonts/normal_font = SubResource( 3 )
+text = "Cadastre-se no site TrackDay.Freevar.com"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -20.194
+[connection signal="pressed" from="Entrar" to="." method="enviarlogin"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="requisicao_completa"]

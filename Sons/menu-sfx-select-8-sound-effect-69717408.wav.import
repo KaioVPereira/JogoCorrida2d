@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/menu-sfx-select-8-sound-effect-69717408.wav-864c666209570ab1781a830bd72765fb.sample"
+
+[deps]
+
+source_file="res://Sons/menu-sfx-select-8-sound-effect-69717408.wav"
+dest_files=[ "res://.import/menu-sfx-select-8-sound-effect-69717408.wav-864c666209570ab1781a830bd72765fb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

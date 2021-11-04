@@ -1,0 +1,327 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Pistas/switchback27.png" type="Texture" id=1]
+[ext_resource path="res://carros.tscn" type="PackedScene" id=2]
+[ext_resource path="res://_script_pista.gd" type="Script" id=3]
+[ext_resource path="res://cena_hud.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Fonts/ubuntu/Ubuntu-BoldItalic.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Imagens/ScreenHunter_666-removebg-preview.png" type="Texture" id=6]
+[ext_resource path="res://Imagens/ScreenHunter_668-removebg-preview.png" type="Texture" id=7]
+[ext_resource path="res://Sons/mk64_countdown.wav" type="AudioStream" id=8]
+[ext_resource path="res://Sons/05_nobody.wav" type="AudioStream" id=9]
+[ext_resource path="res://Imagens/pngegg.png" type="Texture" id=10]
+[ext_resource path="res://Sons/Soundstorm-1_Backgrounds-MunichNewYear-5_B01-01098_preview..wav" type="AudioStream" id=11]
+[ext_resource path="res://Sons/CrowdNewYear-6013_91_preview.mp3-Part.wav" type="AudioStream" id=12]
+[ext_resource path="res://Imagens/ScreenHunter_667-removebg-preview.png" type="Texture" id=13]
+[ext_resource path="res://Sons/menu-sfx-select-15-sound-effect-sound-effects-free-download.wav" type="AudioStream" id=14]
+[ext_resource path="res://Sons/correta.wav" type="AudioStream" id=15]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 2.42535, 32.7049 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Farois"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Farois:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 2.73208 ),
+"update": 1,
+"values": [ ExtResource( 6 ), ExtResource( 13 ), ExtResource( 7 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Farois:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("VaiVaiVai:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 2, 2.8, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Bandeirada"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Bandeirada:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.12, 0.2 ), Vector2( 0.208, 0.302 ), Vector2( 0.12, 0.2 ), Vector2( 0.208, 0.302 ), Vector2( 0.12, 0.2 ), Vector2( 0.208, 0.302 ), Vector2( 0.12, 0.2 ), Vector2( 0.208, 0.302 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Bandeirada:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3, 3.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Bandeirada:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 3, 3.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Parabens:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 3, 3.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "saidaparavitoria"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="DynamicFont" id=5]
+size = 34
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 25
+font_data = ExtResource( 5 )
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 5.66026, 1.56838 )
+scale = Vector2( 1.838, 1.813 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 520.764, 299.038 )
+scale = Vector2( 1.58653, 1.67536 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( -5.42214, 1.02884 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 33.1569, 391.737 )
+polygon = PoolVector2Array( -13.5398, -17.3062, -11.5076, -119.842, -9.61771, -82.0442, -4.57803, -42.3567, 9.2811, -0.779327, 29.4398, 43.3179, 59.6779, 84.2654, 86.7663, 112.614, 134.643, 140.962, 197.639, 160.491, 262.149, 166.986, 382.218, 156.081, 445.691, 149.755, 455.774, 146.09, 455.774, 137.181, 584.954, 139.854, 588.215, 151.041, 722.851, 166.316, 780.983, 159.231, 825.427, 153.329, 883.988, 130.138, 918.758, 99.5262, 950.784, 63.3487, 980.707, 10.9109, 994.279, -31.349, 1001.06, -97.1959, 999.126, -173.854, 1000.1, -248.545, 1008.82, -262.305, 1015.61, -181.716, 1014.64, -42.1597, 1005.68, 166.316, -12.1719, 168.906 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 21.5, 20.23 )
+scale = Vector2( 0.8, 0.970143 )
+polygon = PoolVector2Array( 0.31414, 10.4509, -4.53825, 211.359, 0.229111, 258.851, 8.84842, 212.658, 23.0225, 172.398, 45.8586, 131.489, 88.3809, 84.736, 127.753, 54.866, 180.146, 28.0456, 247.323, 10.1767, 322.254, 0.320753, 509.61, 19.3074, 517.167, 30.1375, 550.634, 31.04, 556.032, 22.9174, 703.429, 4.89993, 700.275, -5.19082, 314.379, -8.77012, 242.742, -2.58671 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 654.695, 29.6881 )
+scale = Vector2( 0.8, 1 )
+polygon = PoolVector2Array( -13.3708, -13.1567, -87.3264, -21.1162, -95.7717, -2.83736, -66.0831, -4.31155, -39.4241, -6.76852, -15.1885, 0.111008, 24.1943, 16.327, 50.2475, 31.0689, 73.8772, 57.6042, 87.2067, 82.6653, 92.0538, 112.64, 90.2361, 136.227, 83.3794, 158.895, 66.7948, 187.187, 37.0568, 213.161, 5.60333, 240.526, -26.994, 266.5, -71.6008, 291.546, -122.498, 310.098, -179.513, 317.713, -217.432, 310.705, -268.381, 300.788, -336.534, 259.206, -361.108, 241.285, -393.715, 228.062, -421.228, 223.93, -451.916, 220.159, -481.052, 227.088, -506.25, 240.947, -518.849, 259.216, -506.25, 281.265, -481.052, 293.864, -454.278, 298.904, -364.509, 300.164, -273.952, 308.353, -205.444, 319.692, -173.206, 327.804, -129.059, 320.236, -74.7747, 302.44, -21.7877, 272.689, 11.8386, 246.244, 115.775, 157.816, 111.699, 151.205, 228.881, 26.4148, 253.337, 7.407, 276.773, -0.0308189, 295.115, -9.94791, 329.76, -8.29506, 368.481, -4.98936, 404.146, 9.88628, 430.616, 26.3343, 452.952, 47.3717, 465.284, 75.1738, 472.407, 109.899, 487.702, 99.1401, 483.626, -12.4272, 295.375, -27.4158, 241.987, -14.4407 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 498.729, 189.267 )
+scale = Vector2( 1.51789, 1.68932 )
+polygon = PoolVector2Array( -1.27924, 11.1014, -1.82468, 18.0047, -10.6908, 8.9632, -25.7452, 0.474068, -45.8177, -16.5042, -76.4958, -26.0422, -105.548, -35.3649, -136.674, -39.4669, -161.161, -34.992, -180.252, -29.3984, -197.045, -17.4853, -215.989, -3.48944, -230.197, 11.5431, -240.088, 31.9029, -246.058, 60.7027, -239.867, 87.034, -228.811, 108.222, -214.439, 123.651, -194.096, 138.874, -173.533, 148.336, -133.069, 156.153, -168.073, 155.389, -193.145, 148.391, -210.417, 137.505, -224.068, 127.916, -237.44, 114.179, -246.912, 96.8139, -252.762, 76.3386, -254.393, 61.0231, -253.296, 41.0812, -246.999, 22.1531, -237.11, 2.67171, -224.999, -8.57751, -212.624, -19.3298, -194.31, -29.5076, -167.503, -37.3148, -141.252, -40.1387, -99.8896, -39.6713, -78.838, -39.1735, -40.0827, -41.3186, -21.4439, -41.3186, -23.5945, -34.7885, 72.4669, -23.6873, 40.9243, 5.69815, 22.2855, 14.8403, -1.83322, 18.0703 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 544.657, 456.655 )
+polygon = PoolVector2Array( -42.3479, 1.70874, 28.8376, -0.811096, 96.8734, 1.07874, 174.359, 3.59857, 210.896, 2.33868, 241.057, 3.92609, 279.52, -4.03894, 318.693, -20.5861, 353.514, -47.0616, 381.805, -92.2904, 388.334, -122.075, 392.687, -156.273, 385.07, -173.923, 370.924, -312.919, 354.602, -291.959, 321.958, -257.762, 271.903, -205.914, 220.761, -147.448, 166.354, -91.1873, 118.476, -49.2678, 82.5671, -26.1018, 45.2166, -16.5602, -8.95996, -1.44116, -73.2159, 0.44873, -254.952, -3.57266 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( -3.35585, 0.796889 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2( 34.5249, 391.282 )
+polygon = PoolVector2Array( -13.5398, -17.3062, -17.6369, -117.143, -6.94683, -47.5711, -1.31485, -3.5195, 18.2717, 33.9874, 54.1957, 81.2886, 87.5687, 111.483, 131.536, 137.44, 199.342, 158.1, 267.411, 164.561, 379.451, 155.451, 425.207, 147.26, 455.774, 146.09, 455.774, 137.181, 601.514, 139.889, 602.602, 148.714, 722.717, 165.516, 771.982, 159.689, 822.407, 152.024, 859.403, 136.58, 893.136, 114.517, 927.956, 86.9383, 950.807, 57.1534, 975.834, 5.30563, 993.245, -44.3358, 993.245, -92.8742, 993.245, -174.507, 992.156, -223.045, 999.773, -253.933, 1003.04, -188.848, 999.773, -101.699, 998.685, -35.5107, 995.421, 161.952, 778.849, 168.906, 723.757, 174.695, 261.777, 171.061, -12.1719, 168.906 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2( 21.5843, 20.4419 )
+scale = Vector2( 0.8, 0.970143 )
+polygon = PoolVector2Array( 0.31414, 10.4509, -1.13063, 206.881, -2.73065, 292.079, 5.26223, 215.03, 21.1138, 172.865, 48.3262, 132.404, 87.217, 87.9433, 129.643, 55.5086, 181.793, 30.727, 248.526, 10.6831, 322.772, 4.8522, 512.513, 22.2765, 515.425, 29.2531, 531.967, 32.5165, 545.657, 32.5165, 552.142, 24.0836, 700.536, 6.96334, 700.275, -5.19082, 333.179, -7.79341 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2( 652.811, 24.9623 )
+scale = Vector2( 0.8, 1 )
+polygon = PoolVector2Array( -15.5378, -4.34991, -88.0652, -8.55439, -83.8607, -0.145424, -65.8636, 1.24781, -9.92493, 8.32545, 32.5861, 27.6097, 66.4509, 59.75, 84.4641, 94.2278, 89.5078, 124.031, 84.4641, 146.237, 77.2589, 173.702, 55.643, 198.83, 34.7478, 218.114, -3.2771, 242.645, -35.9951, 270.163, -73.5602, 289.819, -114.917, 303.182, -166.625, 314.496, -206.631, 315.599, -233.515, 307.509, -265.021, 299.647, -301.374, 283.922, -329.245, 262.301, -359.54, 245.593, -391.573, 232.118, -450.74, 221.734, -487.916, 229.997, -505.594, 239.542, -523.272, 263.23, -513.55, 278.434, -502.712, 285.99, -483.813, 297.96, -467.588, 302.829, -453.004, 304.95, -418.091, 307.425, -385.387, 306.364, -370.661, 305.362, -260.177, 315.599, -210.568, 320.638, -192.258, 323.335, -189.165, 331.467, -152.297, 328.198, -114.761, 321.268, -65.0778, 305.544, -13.5276, 273.629, 16.014, 248.502, 57.084, 211.686, 117.608, 162.015, 114.006, 152.665, 219.69, 34.2936, 242.714, 17.5862, 269.373, 3.82711, 292.397, -1.08685, 349.35, -0.104053, 390.551, 9.72383, 414.786, 23.4829, 435.386, 36.2592, 454.775, 60.8289, 469.316, 93.2609, 466.893, 131.59, 479.01, 109.968, 480.222, -7.96638, 294.82, -14.8459, 241.987, -14.4407 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2( 496.657, 188.007 )
+scale = Vector2( 1.51789, 1.68932 )
+polygon = PoolVector2Array( -1.27924, 11.1014, -1.82468, 18.0047, -15.8609, 17.0296, -27.3168, 7.61704, -51.1384, -9.80497, -76.068, -24.7381, -105.983, -33.698, -133.953, -36.3387, -179.141, -28.5951, -196.377, -17.5029, -214.079, -2.85274, -228.521, 13.681, -239.002, 33.7726, -244.592, 59.0964, -238.769, 86.9315, -229.219, 105.977, -215.011, 123.557, -196.144, 138.625, -177.743, 147.206, -166.563, 151.392, -154.684, 155.578, -144.435, 156.833, -134.842, 158.206, -151.813, 157.656, -169.818, 154.91, -193.134, 148.32, -225.453, 128.824, -239.03, 112.074, -247.147, 96.5594, -253.345, 78.9854, -256.163, 60.6235, -253.64, 40.1305, -247.442, 22.9684, -239.325, 7.7286, -226.191, -8.33507, -197.946, -28.7203, -172.125, -37.3149, -145.871, -39.6713, -135.221, -39.8399, -99.8896, -39.6713, -78.838, -39.1735, -29.8049, -39.467, -29.3899, -35.365, 69.434, -21.9756, 36.9919, 8.49979, 12.3229, 18.076, -1.41962, 19.1225 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2( 551.014, 446.06 )
+polygon = PoolVector2Array( -5.69458, 2.08389, -44.609, 7.26376, -153.86, 7.13498, -215.034, 7.13498, -267.371, 10.7918, -0.38623, 12.9108, 212.084, 10.8842, 235.874, 11.8513, 265.155, 8.10138, 295.35, -3.95782, 326.461, -23.438, 358.486, -55.9051, 375.871, -90.2274, 381.361, -115.273, 384.106, -143.102, 378.616, -149.596, 375.871, -182.99, 371.296, -255.346, 362.146, -302.655, 311.82, -245.142, 261.495, -193.194, 213.914, -140.319, 162.673, -85.5892, 137.053, -65.1814, 99.5375, -37.3525, 41.8917, -8.59595 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Node2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 360.884, 497.291 )
+
+[node name="Node2D2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 0.687485, 3.49316 )
+scale = Vector2( 1.04074, 0.991272 )
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( 449.238, 499.569 )
+shape = SubResource( 1 )
+
+[node name="Farois" type="Sprite" parent="."]
+position = Vector2( 743.81, 63.1633 )
+scale = Vector2( 0.159085, 0.166924 )
+texture = ExtResource( 6 )
+
+[node name="Largada" type="AnimationPlayer" parent="."]
+autoplay = "Farois"
+anims/Farois = SubResource( 2 )
+
+[node name="Somstart" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="SomAmbiente" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = -18.697
+autoplay = true
+
+[node name="Chegada" type="AnimationPlayer" parent="."]
+anims/Bandeirada = SubResource( 3 )
+
+[node name="Bandeirada" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 528.827, 103.568 )
+scale = Vector2( 0.208, 0.302 )
+texture = ExtResource( 10 )
+
+[node name="Fogos" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+
+[node name="comemoracao" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+volume_db = -8.078
+
+[node name="Saidadatela" type="AnimationPlayer" parent="."]
+anims/saidaparavitoria = SubResource( 4 )
+
+[node name="VaiVaiVai" type="RichTextLabel" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 743.367
+margin_top = 272.854
+margin_right = 902.367
+margin_bottom = 375.854
+custom_fonts/normal_font = SubResource( 5 )
+text = "VAI VAI VAI..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Parabens" type="RichTextLabel" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 733.484
+margin_top = 298.804
+margin_right = 893.484
+margin_bottom = 427.804
+custom_fonts/normal_font = SubResource( 6 )
+text = "Parabens, você completou as voltas"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ContaVoltas" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+volume_db = -8.078
+
+[node name="impacto" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+volume_db = -7.068
+[connection signal="body_entered" from="Area2D" to="." method="colisao"]
+[connection signal="body_entered" from="Area2D2" to="." method="contagem_voltas"]
+[connection signal="animation_finished" from="Chegada" to="." method="chegada_conclusao"]
+[connection signal="animation_finished" from="Saidadatela" to="." method="anim_saida_tela"]
